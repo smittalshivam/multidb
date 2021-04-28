@@ -1,0 +1,36 @@
+{
+  "MAIN": {
+    "datasourceUrl": "jdbc:mysql://localhost:3306/a?useSSL=false",
+    "datasourceUsername": "admin",
+    "datasourcePassword": "Admin@123",
+    "hibernateProperties": {
+      "hibernate.show_sql": true,
+      "hibernate.format_sql": true,
+      "hibernate.hbm2ddl.auto": "update",
+      "hibernate.dialect": "org.hibernate.dialect.MySQL8Dialect"
+    }
+  },
+  "DB_A": {
+    "datasourceUrl": "jdbc:mysql://localhost:3306/b?useSSL=false",
+    "datasourceUsername": "admin",
+    "datasourcePassword": "Admin@123",
+    "hibernateProperties": {
+      "hibernate.show_sql": true,
+      "hibernate.format_sql": true,
+      "hibernate.hbm2ddl.auto": "update",
+      "hibernate.dialect": "org.hibernate.dialect.MySQL8Dialect"
+    }
+  },
+  "DB_B": {
+    "datasourceUrl": "jdbc:postgresql://localhost:5432/postgres",
+    "datasourceUsername": "postgres",
+    "datasourcePassword": "admin",
+    "schemaName": "c",
+    "hibernateProperties": {
+      "hibernate.show_sql": true,
+      "hibernate.format_sql": true,
+      "hibernate.hbm2ddl.auto": "update",
+      "hibernate.dialect": "org.hibernate.dialect.PostgreSQLDialect"
+    }
+  }
+}

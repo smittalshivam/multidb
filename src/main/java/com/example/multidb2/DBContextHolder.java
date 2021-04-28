@@ -1,13 +1,16 @@
 package com.example.multidb2;
 
 public class DBContextHolder {
-    private static final ThreadLocal<DBTypeEnum> contextHolder = new ThreadLocal<>();
-    public static void setCurrentDb(DBTypeEnum dbType) {
+    private static final ThreadLocal<String> contextHolder = new ThreadLocal<>();
+
+    public static void setCurrentDb(String dbType) {
         contextHolder.set(dbType);
     }
-    public static DBTypeEnum getCurrentDb() {
+
+    public static String getCurrentDb() {
         return contextHolder.get();
     }
+
     public static void clear() {
         contextHolder.remove();
     }

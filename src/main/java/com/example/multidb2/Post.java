@@ -8,18 +8,16 @@ import javax.persistence.Id;
 public class Post {
     @Id
     private long id;
-    private String name;
+    private String firstName;
+    private String lastName;
 
-    public Post(long id, String name) {
+    public Post(long id, String firstName, String lastName) {
         this.id = id;
-        this.name = name;
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
     public Post() {
-    }
-
-    public Post(String name) {
-        this.name = name;
     }
 
     public long getId() {
@@ -30,11 +28,19 @@ public class Post {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 }
